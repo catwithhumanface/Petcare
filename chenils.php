@@ -104,8 +104,8 @@
                         <li class="dropdown">
                             <a href="#"  data-hover="dropdown" data-toggle="dropdown">Services<span class="pe-7s-angle-down"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                               <li><a href="chenils.html">Chenils</a></li>
-                                <li><a href="particuliers.html">Particuliers</a></li>
+                               <li><a href="chenils.php">Chenils</a></li>
+                                <li><a href="particuliers.php">Particuliers</a></li>
                             </ul>
                         </li>
 						<li class="dropdown">
