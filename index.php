@@ -1,3 +1,21 @@
+<?php
+$servername = "localhost";
+$database = "petcare";
+$username = "root";
+$password = "mysql";
+
+// Create connection
+
+$conn = mysqli_connect($servername, $username, $password, $database);
+
+// Check connection
+
+if ($conn->connect_error) {
+die("Connection failed: " . $conn->connect_error);
+}
+
+mysqli_close($conn);
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -46,9 +64,28 @@
             <div class="top-bar smoothie hidden-xs">
                 <div class="container">
                     <div class="clearfix">
-                       
+                        <ul class="list-inline social-links wow pull-left">
+                            <li>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-pinterest"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-dribbble"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-behance"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
 
-                        <div class="pull-right text-right">
+                        <div class="pull-right text-right" >
                             <ul class="list-inline nav navbar-nav navbar-right">
                                 <li>
                                     <div><a href="#">Sign in</a></div>
@@ -83,7 +120,7 @@
                         <li class="dropdown">
                             <a href="#"  data-hover="dropdown" data-toggle="dropdown">Services<span class="pe-7s-angle-down"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                               <li><a href="chenils.html">Chenils</a></li>
+                                <li><a href="chenils.php">Chenils</a></li>
                                 <li><a href="particuliers.html">Particuliers</a></li>
                             </ul>
                         </li>
@@ -133,95 +170,99 @@
             </div>
         </div>
 
-        <section class="dark-wrapper opaqued parallax" data-parallax="scroll" data-image-src="assets/img/bg/bg2.jpg" data-speed="0.7">
-            <div class="section-inner pad-top-200">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 mt30 wow text-center">
-                            <h2 class="section-heading">CHENILS</h2>
-                        </div>
+        <!-- Header -->
+        <header id="headerwrap" class="backstretched no-overlay fullheight">
+            <div class="container vertical-center">
+                <div class="intro-text vertical-center text-left smoothie">
+                    <div class="intro-heading wow fadeIn heading-font" data-wow-delay="0.2s">Welcome To Pet Care</div>
+                    <div class="intro-sub-heading wow fadeIn secondary-font" data-wow-delay="0.4s">We are here to help you <span class="rotate">grow, profit, succeed</span></div>
+                    <a href="#welcome" class="btn btn-primary btn-white mt30 page-scroll" data-wow-delay="0.6s">Find Out More</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="row">
+            <div class="col-sm-6 nopadding-lr match-height white-bg" data-mh="promo-inner">
+                <div class="section-inner pad-sides-60 promo-inner">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <h3 class="mt0">Promo Box</h3>
+                        <p class="lead">Contrasted interested eat alteration pianoforte sympathize was. He families believed if no elegance interest surprise an. It abode wrong miles an so delay plate. She relation own put outlived may disposed.</p>
+                        <p>Credibly expedite progressive expertise without enterprise-wide imperatives. Dynamically iterate multimedia based manufactured products for business value. Dynamically iterate client-centered best practices before process-centric solutions.</p>
+                        <p class="mt30"><a href="#contact" class="btn btn-primary btn-white page-scroll">Find Out More</a></p>
                     </div>
                 </div>
             </div>
-        </section>
+
+            <div class="col-sm-6 nopadding-lr dark-wrapper remove-opacqued-bg opaqued background-cover match-height" style="background-image: url('assets/img/bg/app1.jpg');" data-mh="promo-inner">
+                <div class="dark-opaqued section-inner pad-sides-60 text-right promo-inner"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 nopadding-lr dark-wrapper remove-opacqued-bg opaqued background-cover match-height" style="background-image: url('assets/img/bg/bg6.jpg');" data-mh="promo-inner">
+                <div class="dark-opaqued section-inner pad-sides-60 text-right promo-inner"></div>
+            </div>
+
+            <div class="col-sm-6 nopadding-lr match-height" data-mh="promo-inner">
+                <div class="section-inner pad-sides-60 promo-inner">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <h3 class="mt0">Promo Box</h3>
+                        <p class="lead">Contrasted interested eat alteration pianoforte sympathize was. He families believed if no elegance interest surprise an. It abode wrong miles an so delay plate. She relation own put outlived may disposed.</p>
+                        <p>Credibly expedite progressive expertise without enterprise-wide imperatives. Dynamically iterate multimedia based manufactured products for business value. Dynamically iterate client-centered best practices before process-centric solutions.</p>
+                        <p class="mt30"><a href="#contact" class="btn btn-primary btn-white page-scroll">Find Out More</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
-        
+        <div class="row">
+            <div class="col-sm-6 nopadding-lr match-height white-bg" data-mh="promo-inner">
+                <div class="section-inner pad-sides-60 promo-inner">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <h3 class="mt0">Promo Box</h3>
+                        <p class="lead">Contrasted interested eat alteration pianoforte sympathize was. He families believed if no elegance interest surprise an. It abode wrong miles an so delay plate. She relation own put outlived may disposed.</p>
+                        <p>Credibly expedite progressive expertise without enterprise-wide imperatives. Dynamically iterate multimedia based manufactured products for business value. Dynamically iterate client-centered best practices before process-centric solutions.</p>
+                        <p class="mt30"><a href="#contact" class="btn btn-primary btn-white page-scroll">Find Out More</a></p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col-sm-6 nopadding-lr dark-wrapper remove-opacqued-bg opaqued background-cover match-height" style="background-image: url('assets/img/bg/app1.jpg');" data-mh="promo-inner">
+                <div class="dark-opaqued section-inner pad-sides-60 text-right promo-inner"></div>
+            </div>
+        </div>
 
-
-
-
-        <section>
+        <section class="opaqued light-opaqued parallax">
             <div class="section-inner">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-4 wow fadeIn" data-wow-delay="0.2s">
-                            <div class="icon-box-1 match-height mb30">
-                             <img class="chenils" src ="assets/service/pension1.jpg">
-                                <div class="content-area">
-                                    <h3 class="title">PENSION1</h3>
-                                    <div class="content">Conveniently productize inexpensive applications without multifunctional benefits. Energistically seize functional interfaces and resource-leveling customer service. Efficiently maximize mission-critical platforms with superior ideas. Synergistically utilize team driven.</div>
-                                    <a href="mailto:"><h4 class="mailto">Envoyer un mail</h4></a>
-                                    </div>
-                            </div>
-                         </div>
-                        <div class="col-sm-4 wow fadeIn" data-wow-delay="0.2s">
-                            <div class="icon-box-1 match-height mb30">
-                              <img class="chenils" src ="assets/service/pension1.jpg">
-                                <div class="content-area">
-                                    <h3 class="title">PENSION2</h3>
-                                    <div class="content">Dynamically mesh quality applications for leveraged users. Phosfluorescently predominate resource maximizing scenarios without future-proof scenarios. Intrinsicly actualize extensive e-tailers before superior technologies. Assertively morph interdependent expertise for virtual niche.</div>
-                                    <a href="mailto:"><h4 class="mailto">Envoyer un mail</h4></a>
-                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 wow fadeIn" data-wow-delay="0.2s">
-                            <div class="icon-box-1 match-height mb30">  
-                            <img class="chenils" src ="assets/service/pension1.jpg">
-                                <div class="content-area">
-                                    <h3 class="title">PENSION3</h3>
-                                    <div class="content">Seamlessly simplify multidisciplinary users whereas team building manufactured products. Professionally enable dynamic action items whereas bricks-and-clicks processes. Dynamically mesh functional data without innovative materials. Seamlessly scale distributed methodologies.</div>
-                                    <a href="mailto:"><h4 class="mailto">Envoyer un mail</h4></a>
-                                   </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 wow fadeIn" data-wow-delay="0.2s">
-                            <div class="icon-box-1 match-height mb30">
-                              <img class="chenils" src ="assets/service/pension1.jpg">
-                                <div class="content-area">
-                                    <h3 class="title">PENSION4</h3>
-                                    <div class="content">Uniquely reintermediate customized methods of empowerment after cutting-edge convergence. Efficiently underwhelm functionalized value before worldwide services. Distinctively synergize synergistic infomediaries before low-risk high-yield methods.</div>
-                                    <a href="mailto:"><h4 class="mailto">Envoyer un mail</h4></a>
-                                    </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 wow fadeIn" data-wow-delay="0.2s">
-                            <div class="icon-box-1 match-height mb30">
-                              <img class="chenils" src ="assets/service/pension1.jpg">
-                                <div class="content-area">
-                                    <h3 class="title">PENSION5</h3>
-                                    <div class="content">Energistically e-enable visionary markets rather than empowered methodologies. Phosfluorescently actualize multimedia based "outside the box" thinking after distinctive interfaces. Continually grow technically sound total linkage for.</div>
-                                    <a href="mailto:"><h4 class="mailto">Envoyer un mail</h4></a>
-                                    </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 wow fadeIn" data-wow-delay="0.2s">
-                            <div class="icon-box-1 match-height mb30">
-                              <img class="chenils" src ="assets/service/pension1.jpg">
-                                <div class="content-area">
-                                    <h3 class="title">PENSION6</h3>
-                                    <div class="content">Synergistically network market positioning "outside the box" thinking via exceptional solutions. Completely synthesize progressive solutions without exceptional value. Uniquely evisculate orthogonal interfaces after bleeding-edge processes. Credibly.</div>
-                                    <a href="mailto:"><h4 class="mailto">Envoyer un mail</h4></a>
-                                    </div>
-                            </div>
+                        <div class="col-sm-8 col-sm-offset-2">
+                            <ul class="owl-carousel-paged testimonial-owl wow fadeIn list-unstyled" data-items="4" data-items-desktop="[1200,4]" data-items-desktop-small="[980,4]" data-items-tablet="[768,3]" data-items-mobile="[479,2]">
+                                <li>
+                                    <img src="assets/img/logo/logo1.png" class="img-responsive" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/img/logo/logo2.png" class="img-responsive" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/img/logo/logo3.png" class="img-responsive" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/img/logo/logo4.png" class="img-responsive" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/img/logo/logo5.png" class="img-responsive" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/img/logo/logo6.png" class="img-responsive" alt="">
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-     
 
         <footer class="white-wrapper">
             <div class="container">
@@ -351,6 +392,21 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script type="text/javascript">
+    $(document).ready(function() {
+        'use strict';
+        jQuery('#headerwrap').backstretch([
+            "assets/img/bg/bg1.jpg",
+            "assets/img/bg/bg2.jpg",
+            "assets/img/bg/bg3.jpg"
+        ], {
+            duration: 8000,
+            fade: 500
+        });
+    });
+    </script>
+
 </body>
 
 </html>
+
