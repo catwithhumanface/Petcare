@@ -167,11 +167,12 @@
         </section>
 
 
+  
 
         <section>
             <div class="section-inner">
 			
-		<form action = "/chenils_research.php" name="search_form" method="post">
+		<form action = "chenils_research.php" name="search_form" method="post">
 			   <div class="col-xs-8 col-xs-offset-2">
 					<div class="input-group" style='margin-bottom:50px; margin-left:20%; margin-right:20%; width:60%;'>
 					   
@@ -255,7 +256,7 @@
                            
                             // Check connection
                             
-
+                            $searchterm = $_POST['searchterm'];
                             
                             // Style procédural
                             mysqli_set_charset( $conn, "utf8");
@@ -266,7 +267,7 @@
                             // echo "connected !";
                             }
 
-                            $sql = "SELECT CHENNOM, CHENADR,CHENMAIL, CHENSW, CHENTEL, CHENPIC FROM CHENILS";
+                           $sql = "SELECT CHENNOM, CHENADR,CHENMAIL, CHENSW, CHENTEL, CHENPIC FROM CHENILS WHERE CHENNOM LIKE '% $searchterm %'";
                            $result = $conn->query($sql);
                            
                            if ($result->num_rows > 0) {

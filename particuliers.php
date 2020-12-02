@@ -201,9 +201,16 @@
 
                             // Create connection
 
+                            
                             $conn = mysqli_connect($servername, $username, $password, $database);
-
+                           
                             // Check connection
+                            
+
+                            
+                            // Style procédural
+                            mysqli_set_charset( $conn, "utf8");
+
 
                             if ($conn->connect_error) {
                             die("Connection failed: " . $conn->connect_error);
