@@ -99,7 +99,7 @@
                 <div class="collapse navbar-collapse" id="main-navigation">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-                            <a href="index.html">Home</a>
+                            <a href="index.php">Home</a>
 						</li>
                         <li class="dropdown">
                             <a href="#"  data-hover="dropdown" data-toggle="dropdown">Services<span class="pe-7s-angle-down"></span></a>
@@ -171,20 +171,7 @@
 
         <section>
             <div class="section-inner">
-			
-		<form action = "chenils_research.php" name="search_form" method="post">
-			   <div class="col-xs-8 col-xs-offset-2">
-					<div class="input-group" style='margin-bottom:50px; margin-left:20%; margin-right:20%; width:60%;'>
-					   
-						<input type="text" id ="searchterm" class="form-control" name="searchterm" placeholder="Search term...">
-						<span class="input-group-btn" style='margin-right:40%;'>
-							<button class="btn btn-default" type="submit">
-								<img class="search_icon" src ="assets/img/search_icon" style='width:40px; heigth:auto; padding-top:10px;'>
-							</button>
-						</span>
-					</div>
-				</div>
-		</form>
+	
 		<div class="container">
 			
 	<div class="row">
@@ -219,6 +206,7 @@
                             }
 
                             $sql = "SELECT CHENNOM, CHENADR, CHENTEL, Chenpic FROM CHENILS";
+                            //  $sql = "SELECT * FROM GARDIENSPART";
                            $result = $conn->query($sql);
                            
                            if ($result->num_rows > 0) {

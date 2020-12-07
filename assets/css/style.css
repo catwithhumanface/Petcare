@@ -880,6 +880,7 @@ section {
     background-color: #DADFE1
 }
 
+
 .white-bg {
     background-color: #fff
 }
@@ -891,6 +892,7 @@ section {
 .dark-wrapper.opaqued,
 .dark-opaqued {
     background-color: rgba(0, 0, 0, 0.7);
+
 }
 
 .dark-wrapper.dark-grey-wrapper.opaqued,
@@ -2431,3 +2433,9 @@ h3.siteto{
     text-align:right;
 }
 
+.imgback{
+    background-image:url('../img/bg/app1.jpg');
+    background-size: 1430 406;
+      background-color: rgba(68, 34, 69, 0.9);
+
+}

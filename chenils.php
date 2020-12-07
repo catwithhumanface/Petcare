@@ -154,8 +154,8 @@
             </div>
         </div>
 
-        <section class="dark-wrapper opaqued parallax" data-parallax="scroll" data-image-src="assets/img/bg/bg2.jpg" data-speed="0.7">
-            <div class="section-inner pad-top-200">
+        <section class="dark-wrapper opaqued parallax imgback">
+            <div class="section-inner pad-top-200 ">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12 mt30 wow text-center">
@@ -171,7 +171,7 @@
         <section>
             <div class="section-inner">
 			
-		<form action = "/chenils_research.php" name="search_form" method="post">
+		<form action = "/chenils_recherche.php" name="search_form" method="post">
 			   <div class="col-xs-8 col-xs-offset-2">
 					<div class="input-group" style='margin-bottom:50px; margin-left:20%; margin-right:20%; width:60%;'>
 					   
@@ -181,6 +181,7 @@
 								<img class="search_icon" src ="assets/img/search_icon" style='width:40px; heigth:auto; padding-top:10px;'>
 							</button>
 						</span>
+                        
 					</div>
 				</div>
 		</form>
@@ -238,10 +239,6 @@
        
 	</script>
 	
-
-
-
-
                          <?php
                       
                             $servername = "localhost";
@@ -254,9 +251,6 @@
                             $conn = mysqli_connect($servername, $username, $password, $database);
                            
                             // Check connection
-                            
-
-                            
                             // Style procédural
                             mysqli_set_charset( $conn, "utf8");
 
@@ -266,14 +260,14 @@
                             // echo "connected !";
                             }
 
-                            $sql = "SELECT CHENNOM, CHENADR,CHENMAIL, CHENSW, CHENTEL, CHENPIC FROM CHENILS";
+                           $sql = "SELECT CHENNOM, CHENADR,CHENMAIL, CHENSW, CHENTEL, CHENPIC FROM CHENILS";
                            $result = $conn->query($sql);
                            
                            if ($result->num_rows > 0) {
                             // output data of each row
                             while($row = $result->fetch_assoc()) {
                            // echo "Nom de Chenils: " . $row["CHENNOM"]. " - Adresse: " . $row["CHENADR"]. " " . $row["CHENTEL"]. "<br>";
-                            echo " <div class='col-sm-4 wow fadeIn' data-wow-delay='0.2s'>
+                            echo " <div class='col-sm-4 wow fadeIn' data-wow-delay='0.2s' style='height:500px;'>
                             <div class='icon-box-1 match-height mb30'>
                              <img class='chenils' src =". $row["CHENPIC"].">
                              <div class='content-area'>
@@ -424,11 +418,11 @@
   
    
 </body>
+   
     <script src="assets/js/jquery.js"></script>
 	 <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/plugins.js"></script>
+      <script src="assets/js/plugins_chenils.js"></script>
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <script src="assets/js/init.js"></script>
-	
 </html>
 
