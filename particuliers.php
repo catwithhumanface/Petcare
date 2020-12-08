@@ -17,13 +17,12 @@
     <link rel="apple-touch-icon" sizes="114x114" href="assets/img/ico/apple-touch-icon-114x114.png">
     <link rel="apple-touch-icon" sizes="72x72" href="assets/img/ico/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" href="assets/img/ico/apple-touch-icon-57x57.png">
-
+    <link rel="stylesheet" href="assets/css/inscriptionGardien_service.css" >
     <title>Pet Care by Group 4</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/animate.css" rel="stylesheet">
-    <link href="assets/css/plugins.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="assets/css/style.css" rel="stylesheet">
@@ -133,10 +132,6 @@
                         <li class="dropdown">
                             <a href="about.html">About</a>
                         </li>
-                       
-
-                        <li><a href="#search"><i class="pe-7s-search"></i></a></li>
-                        <li><a href="javascript:void(0);" class="side-menu-trigger hidden-xs"><i class="fa fa-bars"></i></a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -205,28 +200,98 @@
                             // echo "connected !";
                             }
 
-                            $sql = "SELECT CHENNOM, CHENADR, CHENTEL, Chenpic FROM CHENILS";
-                            //  $sql = "SELECT * FROM GARDIENSPART";
+                            //$sql = "SELECT CHENNOM, CHENADR, CHENTEL, Chenpic FROM CHENILS";
+                              $sql = "SELECT * FROM GARDIENSPART";
                            $result = $conn->query($sql);
                            
                            if ($result->num_rows > 0) {
                             // output data of each row
                             while($row = $result->fetch_assoc()) {
                            // echo "Nom de Chenils: " . $row["CHENNOM"]. " - Adresse: " . $row["CHENADR"]. " " . $row["CHENTEL"]. "<br>";
-                            echo " <div class='col-sm-4 wow fadeIn' data-wow-delay='0.2s'>
-                            <div class='icon-box-1 match-height mb30'>
-                             <img class='chenils' src =" . $row["Chenpic"]. ">
-                             <div class='content-area'>
-                                    <h3 class='title'>"
-                                    . $row["CHENNOM"]. "</h3> <div class='content'> <a href='javascript:popup(".$row["CHENADR"].");'> Adresse : ".$row["CHENADR"]." </a></div>
-                                    <a href='mailto:'><h4 class='mailto'>Envoyer un mail</h4></a>
-                                    </div>
-                            </div>
-                         </div> ";
+                                echo "<div class='col-sm-4 wow fadeIn' data-wow-delay='0.2s' style='height:500px;'>
+                                        <div class='icon-box-1 match-height mb30'>
+                                            <img class='chenils' src =". $row["GPPIC"].">
+                                            <div class='content-area'>
+                                                <h3 class='title'>" . $row["GPPRENOM"]. "</h3> 
+                                                <div class='content'>";
+                                                        if($row["GPEVAL"] == NULL){
+                                                            echo"<h4>✫✫✫✫✫ </h4>";
+                                                        }else if($row["GPEVAL"] == 5){
+                                                             echo"<h4>✭✭✭✭✭ </h4>";
+                                                        }else if($row["GPEVAL"] == 4){
+                                                             echo"<h4>✭✭✭✭✫ </h4>";
+                                                        }else if($row["GPEVAL"] == 3){
+                                                             echo"<h4>✭✭✭✫✫ </h4>";
+                                                        }else if($row["GPEVAL"] == 2){
+                                                             echo"<h4>✭✭✫✫✫ </h4>";
+                                                        }else if($row["GPEVAL"] == 1){
+                                                             echo"<h4>✭✫✫✫✫ </h4>";
+                                                        }
+                                                         echo"
+                                                            Adresse : ".$row["GPADR"]." <br/>
+                                                            TEL : ".$row["GPTEL"]." </div>";
+                                                             echo" <p class='w3-large w3-text-theme'><b><i class='fa-fw w3-margin-right w3-text-teal'></i>
+                                                                <button style='float:right; padding:7px 7px;  '><a href='#myModal'  data-toggle='modal' data-target='#myModal' data-idgp=".$row["IDGP"]."> ";
+                                                                
+                                                                 if($row["GPGENRE"] == "F"){
+                                                                    echo"Contacter la gardienne  </a> </button></b> </p>";
+                                                                }else {
+                                                                    echo"Contacter le gardien </a> </button></b> </p>";
+                                                                }
+                                                             //echo" <button style='float:right; padding:7px 7px;  '><a href='#myModal'  data-toggle='modal' data-target='#myModal' data-idgp=".$row["IDGP"].">Open Modal</a></button>;";
+                                                    
+                                                echo"
+                                                </div>
+                                        </div>
+                                        </div>
+                                        
+                                        ";
                           }
                        } 
 
 			?>
+            
+        
+
+             <div class="modal fade" id="myModal" role="dialog">
+                            <div class="modal-dialog modal-md">
+                                <div class="modal-content">
+                                    <div class="modal-header" style="padding:3px 5px;">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 style="text-align:center ;    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;"><span >ENVOYER UN MESSAGE </span></h4>
+                                    </div>
+                                    <div class="modal-body" style="padding:20px 30px;">
+                                        <form role="form" method="POST" action="particuliers_sendmsg.php">
+                                        <input type="hidden" name="idu" value="">
+                                        <input type="hidden" name="idgp" value="" > 
+                                            <div class="form-group">
+                                                <label for="usrname"><span class="glyphicon glyphicon-user"></span> Nom et Prénom</label>
+                                                <input type="text" class="form-control" id="usrname" value="" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="usrname"><span class="glyphicon glyphicon-envelope"></span> Adresse mail</label>
+                                                <input type="text" class="form-control" id="mail" value=" " readonly>
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label for="usrname"><span class="glyphicon glyphicon-pencil"></span> Message :</label>
+                                                <textarea class="form-control" row = "10" cols="50" id="msg" name="msg" ></textarea>
+                                                
+                                            </div>
+                                            
+                                            <button type="submit" class="btn btn-success btn-block" name="MAJ"><span class="glyphicon glyphicon-off"></span>Envoyer</button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
 
                     </div>
                 </div>
@@ -271,92 +336,22 @@
         </footer>
 
     </div>
-
-    <div class="flexpanel">
-        <div class="viewport-wrap">
-            <div class="viewport">
-                <div class="widget mb50">
-                    <h4 class="widget-title">Latest Articles</h4>
-                    <div>
-                        <div class="media">
-                            <div class="pull-left">
-                                <img class="widget-img" src="assets/img/widget/widget1.jpg" alt="">
-                            </div>
-                            <div class="media-body">
-                                <span class="media-heading"><a href="#">Panic In London</a></span>
-                                <small class="muted">Posted 14 April 2015</small>
-                            </div>
-                        </div>
-                        <div class="media">
-                            <div class="pull-left">
-                                <img class="widget-img" src="assets/img/widget/widget2.jpg" alt="">
-                            </div>
-                            <div class="media-body">
-                                <span class="media-heading"><a href="#">New iPhone News</a></span>
-                                <small class="muted">Posted 14 April 2015</small>
-                            </div>
-                        </div>
-                        <div class="media">
-                            <div class="pull-left">
-                                <img class="widget-img" src="assets/img/widget/widget3.jpg" alt="">
-                            </div>
-                            <div class="media-body">
-                                <span class="media-heading"><a href="#">Our Year In Review</a></span>
-                                <small class="muted">Posted 14 April 2015</small>
-                            </div>
-                        </div>
-                        <div class="media">
-                            <div class="pull-left">
-                                <img class="widget-img" src="assets/img/widget/widget4.jpg" alt="">
-                            </div>
-                            <div class="media-body">
-                                <span class="media-heading"><a href="#">jQuery Tutorial</a></span>
-                                <small class="muted">Posted 14 April 2015</small>
-                            </div>
-                        </div>
-                        <div class="media">
-                            <div class="pull-left">
-                                <img class="widget-img" src="assets/img/widget/widget5.jpg" alt="">
-                            </div>
-                            <div class="media-body">
-                                <span class="media-heading"><a href="#">Sheen Interview</a></span>
-                                <small class="muted">Posted 14 April 2015</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="widget mb50">
-                    <h4 class="widget-title"><strong>Latest</strong> Articles</h4>
-                    <div class="tagcloud">
-                        <a href="#" class="tag-link btn btn-theme btn-xs" title="3 topics">Local</a>
-                        <a href="#" class="tag-link btn btn-theme btn-xs" title="3 topics">Business</a>
-                        <a href="#" class="tag-link btn btn-theme btn-xs" title="3 topics">Media</a>
-                        <a href="#" class="tag-link btn btn-theme btn-xs" title="3 topics">Photogtraphy</a>
-                        <a href="#" class="tag-link btn btn-theme btn-xs" title="3 topics">Aid</a>
-                        <a href="#" class="tag-link btn btn-theme btn-xs" title="3 topics">Fashion</a>
-                        <a href="#" class="tag-link btn btn-theme btn-xs" title="3 topics">News</a>
-                        <a href="#" class="tag-link btn btn-theme btn-xs" title="3 topics">Cars</a>
-                        <a href="#" class="tag-link btn btn-theme btn-xs" title="3 topics">Global Affairs</a>
-                        <a href="#" class="tag-link btn btn-theme btn-xs" title="3 topics">Music</a>
-                        <a href="#" class="tag-link btn btn-theme btn-xs" title="3 topics">Downloads</a>
-                        <a href="#" class="tag-link btn btn-theme btn-xs" title="3 topics">MP3</a>
-                    </div>
-                </div>
-                <div class="widget about-us-widget mb50">
-                    <h4 class="widget-title">About Kompleet</h4>
-                    <p>Professionally monetize team building materials for 24/7 results. Holisticly transition corporate platforms vis-a-vis cutting-edge experiences. Dynamically strategize ubiquitous applications for premier initiatives. Interactively seize resource sucking niche markets.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-  
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+            <script type="text/javascript">
+            $(document).ready(function() {
+                    $('#myModal').on('show.bs.modal', function(e) {
+                    //get data-id attribute of the clicked element
+                    var idgp = $(e.relatedTarget).data('idgp');
+                    //populate the textbox
+                    $(e.currentTarget).find('input[name="idgp"]').val(idgp);
+                     })
+                });
+            </script>
    
 </body>
     <script src="assets/js/jquery.js"></script>
 	 <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/plugins.js"></script>
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+      <script src="assets/js/plugins_chenils.js"></script>
     <script src="assets/js/init.js"></script>
 	
 </html>

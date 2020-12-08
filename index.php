@@ -64,26 +64,7 @@ mysqli_close($conn);
             <div class="top-bar smoothie hidden-xs">
                 <div class="container">
                     <div class="clearfix">
-                        <ul class="list-inline social-links wow pull-left">
-                            <li>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-pinterest"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-dribbble"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-behance"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
+                      
 
                         <div class="pull-right text-right" >
                             <ul class="list-inline nav navbar-nav navbar-right">
@@ -115,13 +96,13 @@ mysqli_close($conn);
                 <div class="collapse navbar-collapse" id="main-navigation">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-                            <a href="index.html">Home</a>
+                            <a href="index.php">Home</a>
 						</li>
                         <li class="dropdown">
                             <a href="#"  data-hover="dropdown" data-toggle="dropdown">Services<span class="pe-7s-angle-down"></span></a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="chenils.php">Chenils</a></li>
-                                <li><a href="particuliers.html">Particuliers</a></li>
+                                <li><a href="particuliers.php">Particuliers</a></li>
                             </ul>
                         </li>
 						<li class="dropdown">
@@ -151,8 +132,6 @@ mysqli_close($conn);
                         </li>
                        
 
-                        <li><a href="#search"><i class="pe-7s-search"></i></a></li>
-                        <li><a href="javascript:void(0);" class="side-menu-trigger hidden-xs"><i class="fa fa-bars"></i></a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
