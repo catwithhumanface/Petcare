@@ -238,18 +238,9 @@
 	
                          <?php
                             require('connexionBD.php');
-                            
-                          //$con = mysqli_connect();
-                        
                             $sql = "SELECT CHENNOM, CHENADR,CHENMAIL, CHENSW, CHENTEL, CHENPIC FROM CHENILS";
                             
                            $result = $bdd->query($sql);
-                          // $result = mysqli_query($bdd, $sql);
-                          
-
-                            // output data of each row
-                           // while($row = $result->fetch_assoc()) {
-                           // while($row = mysqli_fetch_array($result)){
                             while($row = $result->fetch()){
                            // echo "Nom de Chenils: " . $row["CHENNOM"]. " - Adresse: " . $row["CHENADR"]. " " . $row["CHENTEL"]. "<br>";
                             echo " <div class='col-sm-4 wow fadeIn' data-wow-delay='0.2s' style='height:500px;'>

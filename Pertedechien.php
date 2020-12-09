@@ -118,17 +118,7 @@
                         <li class="dropdown">
                             <a href="forum.html">Forum</a>
                         </li>
-						<!-- à trouver dans Mon compte-->
-						<!--
-                        <li class="dropdown">
-                            <a href="about.html">Documents
-							<span class="pe-7s-angle-down"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="header-1.html">Carnets</a></li>
-                                <li><a href="header-2.html">Mes favoris</a></li>
-                            </ul>
-                        </li>
-						-->
+						
                         <li class="dropdown">
                             <a href="about.html">A propos</a>
                         </li>
@@ -170,17 +160,25 @@
             <div class="section-inner">
                 <div class="container">
                     <div class="row">
+                            <div style="paddiing-bottom:30px; margin-left:600px;">
+                                    <button onclick="location.href='Pertedechien1.php'" type="button">
+                                    Déclarer une perte</button>
+                             </div>
                         <?php
-                        require_once('connexion.php');
-                      
-                        $sql="SELECT * FROM pertechien";
-                        $result=mysqli_query($conn, $sql);
-                        while($row=mysqli_fetch_assoc($result)){   
-                             echo '<div class="col-sm-4 blog-item mb100 wow match-height">
-                               <div class="row">
-                                  <div class="col-xs-12">
-                                        <h2 class="post-title">'.$row['NOMCHIENP'].'</h2>
-                                    <table>
+                         require('connexionBD.php');
+
+                          $sql="SELECT * FROM pertechien";
+                           
+                          $result = $bdd->query($sql);
+                           while($row = $result->fetch()){
+                              
+
+                             echo '
+                             <div style="float:left; padding: 20px 20px;">
+                             <table style="width:400px; height:100px;">
+                                        <tr>
+                                            <td colspan=2><h2 class="post-title">'.$row['NOMCHIENP'].'</h2> </td>
+                                        </tr>
                                         <tr>
                                             <td><h6>Race</h6></td>
                                             <td>'.$row['RACEP'].'</td>
@@ -195,19 +193,21 @@
                                         </tr>
                                         <tr>
                                             <td><h6>Contact</h6></td>
-                                            <td colspan=2 ><table>
-                                                            <tr>
-                                                                <td><a href="mailto:'.$row['MAILP'].'">Email</a></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Num :'.$row['NUMP'].'</td>
-                                                            </tr>
-                                                            </table>
+                                            <td colspan=2 >
+                                            <table>
+                                                <tr>
+                                                    <td><a href="mailto:'.$row['MAILP'].'">Email</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Num :'.$row['NUMP'].'</td>
+                                                </tr>
+                                            </table>
                                             </td>
                                         </tr>
-                                    </table>';  }?>  
-                            <button onclick="location.href='Pertedechien1.html'" type="button">
-        Déclarer une perte</button>
+                                      
+                            </table>
+                            </div>';  }?>  
+                            
                     </div>
                 </div>
             </div>
@@ -379,7 +379,7 @@
 
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/plugins_chenils.js"></script>
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <script src="assets/js/init.js"></script>
 

@@ -1,7 +1,5 @@
   <?php
                         require('connexionBD.php');
-                        $sql = "SELECT * FROM GARDIENSPART";
-                        $result = $bdd->query($sql);
                             // Check connection
                             
                             $msg = $_POST['msg'];
@@ -15,7 +13,6 @@
                             $sql = $sql."('$msg', '2', '$idgp')";
                             //$result = $bdd->query($sql);
                             if($bdd -> query($sql)) {
-                                
                                 echo"<script>alert('Votre message a bien été envoyé.');</script>";
                                 echo "<script>location.href='index.php';</script>";
                                 
