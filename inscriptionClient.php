@@ -31,7 +31,7 @@
                             $erreur = "Les deux mots de passes ne correspondent pas";
                         }
                 }else{
-                    $erreur = "Cette adresse mail exite déja ! <a href=\"connexion.php\">Me Connecter</a>";
+                    $erreur = "Cette adresse mail exite déja ! <a href=\"connexion.php\" style='color:white;'>Me Connecter</a>";
                 }
             }else{
                 $erreur = "Votre adresse mail n'est pas valide";

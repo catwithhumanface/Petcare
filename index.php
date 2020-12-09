@@ -44,7 +44,17 @@
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-fixed-top fadeInDown" data-wow-delay="0.5s">
             <div class="top-bar smoothie hidden-xs">
-            
+                <div class="container">
+                    <div class="clearfix">
+                        <div class="pull-right text-right" >
+                            <ul class="list-inline nav navbar-nav navbar-right">
+                                 <li>
+                                    <div><a href="connexion.php">Se Connecter</a></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->

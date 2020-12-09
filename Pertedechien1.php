@@ -40,120 +40,82 @@
             </div>
         </div>
 
-        <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-fixed-top fadeInDown" data-wow-delay="0.5s">
-            <div class="top-bar smoothie hidden-xs">
-                <div class="container">
-                    <div class="clearfix">
-                        <ul class="list-inline social-links wow pull-left">
-                            <li>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-pinterest"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-dribbble"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-behance"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-
-                         <div class="pull-right text-right" >
-                            <ul class="list-inline nav navbar-nav navbar-right">
-                                <li>
-                                    <div><a href="#">s'inscrire</a></div>
-                                </li>
-                                 <li>
-                                    <div><a href="#">se connecter</a></div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header page-scroll">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navigation">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand smoothie logo logo-light" href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
-                    <a class="navbar-brand smoothie logo logo-dark" href="index.html"><img src="assets/img/logo_reverse.png" alt="logo"></a>
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="main-navigation">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <a href="index.html">Accueil</a>
-						</li>
-                        <li class="dropdown">
-                            <a href="#"  data-hover="dropdown" data-toggle="dropdown">Services<span class="pe-7s-angle-down"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="service1.html">Service 1</a></li>
-                                <li><a href="service1.html">Service 2</a></li>
-                                <li><a href="service1.html">Service 3</a></li>
-                                <li><a href="service1.html">Service 4</a></li>
-                            </ul>
+       
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top fadeInDown" data-wow-delay="0.5s">
+    <div class="top-bar smoothie hidden-xs">
+        <div class="container">
+            <div class="clearfix">
+                <div class="pull-right text-right" >
+                    <ul class="list-inline nav navbar-nav navbar-right">
+                         <li>
+                            <div><a href="connexion.php">Se Connecter</a></div>
                         </li>
-						<li class="dropdown">
-                            <a href="#"  data-hover="dropdown" data-toggle="dropdown">Urgences<span class="pe-7s-angle-down"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="urgence1.html">Perte de chiens</a></li>
-                                <li><a href="urgence1.html">Urgence 3</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="forum.html">Forum</a>
-                        </li>
-						<!-- à trouver dans Mon compte-->
-						<!--
-                        <li class="dropdown">
-                            <a href="about.html">Documents
-							<span class="pe-7s-angle-down"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="header-1.html">Carnets</a></li>
-                                <li><a href="header-2.html">Mes favoris</a></li>
-                            </ul>
-                        </li>
-						-->
-                        <li class="dropdown">
-                            <a href="about.html">A propos</a>
-                        </li>
-                       
-
-                        <li><a href="#search"><i class="pe-7s-search"></i></a></li>
-                        <li><a href="javascript:void(0);" class="side-menu-trigger hidden-xs"><i class="fa fa-bars"></i></a></li>
                     </ul>
                 </div>
-                <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container-fluid -->
-        </nav>
-
-
-        <div id="search-wrapper">
-            <button type="button" class="close">×</button>
-            <div class="vertical-center text-center">
-                <form>
-                    <input type="search" value="" placeholder="Enter Search Term" />
-                    <button type="submit" class="btn btn-primary btn-white">Search</button>
-                </form>
             </div>
         </div>
+    </div>
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand smoothie logo logo-light" href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
+            <a class="navbar-brand smoothie logo logo-dark" href="index.html"><img src="assets/img/logo_reverse.png" alt="logo"></a>
+        </div>
 
-        <section class="dark-wrapper opaqued parallax" data-parallax="scroll" data-image-src="assets/img/bg/bg2.jpg" data-speed="0.7">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="index.php">ACCUEIL</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#"  data-hover="dropdown" data-toggle="dropdown">Services<span class="pe-7s-angle-down"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="chenils.php">Chenils</a></li>
+                        <li><a href="particuliers.php">Particuliers</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#"  data-hover="dropdown" data-toggle="dropdown">Inscription<span class="pe-7s-angle-down"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="inscriptionClient.php">Client</a></li>
+                        <li><a href="inscriptionGardien.php">Gardien</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="Pertedechien.php">Perte de chien</a>
+                   
+                </li>
+                <li class="dropdown">
+                    <a href="about.html">A PROPOS</a>
+                </li>
+               
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<div id="search-wrapper">
+    <button type="button" class="close">×</button>
+    <div class="vertical-center text-center">
+        <form>
+            <input type="search" value="" placeholder="Enter Search Term" />
+            <button type="submit" class="btn btn-primary btn-white">Search</button>
+        </form>
+    </div>
+</div>
+
+        <section class="dark-wrapper opaqued parallax imgback">
             <div class="section-inner pad-top-200">
                 <div class="container">
                     <div class="row">
@@ -169,47 +131,45 @@
             <div class="section-inner">
                 <div class="container">
                     <div class="row">
-                        <h2 class="section-heading">Fiche de renseignement</h2>
+                        <h2 class="section-heading" style="text-align:center; padding-bottom:60px;">Fiche de renseignement</h2>
                         
 
-                        <form action="test.php" method="post" id="form1">
-                            <table>
+                        <form style="padding-left:400px;"action="test.php" method="post" id="form1">
+                            <table style="text-align:center;">
                                 <tr>
-                                    <td><h4>Nom du chien </h4></td>
-                                    <td><textarea required rows=1 cols=30 maxlength="30" name="Nomchien"></textarea></td>
+                                    <td><h4>Nom du chien : </h4></td>
+                                    <td><textarea required rows=1 cols=50 maxlength="30" name="Nomchien"></textarea></td>
                                 </tr>
                                 <tr>
-                                    <td><h4>Descritpion </h4></td>
+                                    <td><h4>Descritpion : </h4></td>
                                     <td><textarea required rows=6 cols=50 maxlength=300 name="description"></textarea></td>
                                 </tr>
                                 <tr>
-                                    <td><h4>Race du chien </h4></td>
-                                    <td><select required name="race" id ="race">
-                                    <option name="race">""</option>
-                                    </select></td>
+                                    <td><h4>Race du chien : </h4></td>
+                                    <td><textarea required rows=1 cols=50 maxlength=50 name="race"></textarea></td>
                                 </tr>
                                 <tr>
-                                    <td><h4>Lieu de perte </h4></td>
-                                    <td><textarea required rows=3 cols=30 name ="lieu" maxlength=90></textarea></td>
+                                    <td><h4>Lieu de perte : </h4></td>
+                                    <td><textarea required rows=1 cols=50 name ="lieu" maxlength=90></textarea></td>
                                 </tr>
                                 <tr>
-                                    <td><h4>Contact </h4></td>
+                                    <td><h4>Contact  </h4></td>
                                     <td colspan=2><table>
                                         <tr>
-                                            <td><h4>Numéros de téléphone </h4></td>
-                                            <td><textarea rows=1 cols=10 maxlength=10 name ="tel"></textarea></td>
+                                            <td><h4>Téléphone : </h4></td>
+                                            <td><textarea rows=1 cols=30 maxlength=10 name ="tel"></textarea></td>
                                         </tr>
                                         <tr>
-                                            <td><h4>Adresse mail </h4></td>
-                                            <td><textarea rows=1 name ="mail" required></textarea></td>
+                                            <td><h4>Adresse mail : </h4></td>
+                                            <td><textarea rows=1 cols=30 name ="mail" required></textarea></td>
                                         </tr>
                                     </table>
                                </table>                           
                         </form>
                         <table>
                             <tr>
-                                <td colspan=2><button type="submit" form="form1" value="submit">Envoyer</button>
-                                <td><button type="reset" form="form1" >Effacer</button></td>
+                                <td colspan=2><button type="submit" style="margin-left:600px; margin-top:50px;" form="form1" value="submit">Envoyer</button>
+                                <td><button type="reset" style="margin-top:50px;" form="form1" >Effacer</button></td>
                             </tr>
                         </table>
                         </div>
@@ -217,99 +177,51 @@
             </div>
         </section>
 
-        <section class="dark-wrapper">
+        <section class="opaqued light-opaqued parallax">
             <div class="section-inner">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="widget about-us-widget">
-                                <h4 class="widget-title"><strong>Global</strong> Coverage</h4>
-                                <p>Professionally monetize team building materials for 24/7 results. Holisticly transition corporate platforms vis-a-vis cutting-edge experiences. Dynamically strategize ubiquitous applications for premier initiatives. Interactively seize resource sucking niche markets.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="widget">
-                                <h4 class="widget-title"><strong>Latest</strong> Articles</h4>
-                                <div>
-                                    <div class="media">
-                                        <div class="pull-left">
-                                            <img class="widget-img" src="assets/img/widget/widget1.jpg" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <span class="media-heading"><a href="#">Blog Post A</a></span>
-                                            <small class="muted">Posted 14 April 2015</small>
-                                        </div>
-                                    </div>
-                                    <div class="media">
-                                        <div class="pull-left">
-                                            <img class="widget-img" src="assets/img/widget/widget2.jpg" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <span class="media-heading"><a href="#">Blog Post B</a></span>
-                                            <small class="muted">Posted 14 April 2015</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="widget">
-                                <h4 class="widget-title"><strong>Latest</strong> Articles</h4>
-                                <div class="tagcloud">
-                                    <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">Local</a>
-                                    <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">Business</a>
-                                    <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">Media</a>
-                                    <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">Photogtraphy</a>
-                                    <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">Aid</a>
-                                    <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">Fashion</a>
-                                    <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">News</a>
-                                    <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">Cars</a>
-                                    <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">Global Affairs</a>
-                                    <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">Music</a>
-                                    <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">Downloads</a>
-                                    <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">MP3</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                
                 </div>
             </div>
         </section>
 
-        <footer class="white-wrapper">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <ul class="list-inline social-links wow">
-                            <li>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-pinterest"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-dribbble"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-behance"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <hr class="thin-hr" />
-
-                    <div class="col-md-12 text-center wow">
-                        <span class="copyright">Copyright 2019. Designed by DISTINCTIVE THEMES</span>
+        <div id="footer-wrapper">
+            <section class="dark-wrapper">
+                <div class="section-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="widget about-us-widget">
+                                    <h4 class="widget-title"><strong>Informations</strong> Complémentaires</h4>
+                                    <p>Ce site est un projet du cursus Master 1 Mention MIAGE Ingéniere Métiers de <a href="https://www.ut-capitole.fr/" target="_blank">l'Université Toulouse Capitole </a>. Il a été conçu par ses étudiants dans le but de se perfectionner dans la gestion et création d'un site web. </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="widget">
+                                    <h4 class="widget-title"><strong>Autres</strong> Sites</h4>
+                                    <div>
+                                        <div class="media">
+                                            <ul><li><a href="https://www.empruntemontoutou.com/?gclid=CjwKCAiAv4n9BRA9EiwA30WND0gjCjLI_oBaON-o6RpIJL7XGQRMvC_FsncqLz8XFwd205phtP3ZsRoCxfUQAvD_BwE" target="_blank">Emprunte mon toutou</a></li>
+                                                <li><a href="https://emmenetonchien.com/" target="_blank">Emmene ton chien</a></li>
+                                                <li><a href="https://www.pourmonchien.fr/" target="_blank">Pour Mon Chien</a></li>
+                                                <li><a href="https://www.chien.com/" target="_blank">Chien.com</a></li></ul>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="widget">
+                                    <h4 class="widget-title">Site d'information</h4>
+                                    <div class="tagcloud">
+                                        <a href="http://etu-web2/~22003366/petcare"  title="3 topics">
+                                            Plus d'information sur PETCARE
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </footer>
+            </section>
 
     </div>
 

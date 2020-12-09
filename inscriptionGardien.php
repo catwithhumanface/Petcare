@@ -36,7 +36,7 @@ include("connexionBD.php");
                            $erreur = "Les deux mots de passes ne correspondent pas";
                        }
                    }else{
-                       $erreur = "Cette adresse mail exite déja ! <a href=\"connexion.php\">Me Connecter</a>";
+                       $erreur = "Cette adresse mail exite déja ! <a href=\"connexion.php\" style='color:white;'>Me Connecter</a>";
                    }
              }else{
                $erreur = "Votre adresse mail n'est pas valide";
@@ -131,7 +131,7 @@ include("connexionBD.php");
                      ?>
 
                         <div class="form-item">
-                            <input type="submit" value="S'inscrire" class="submit" name="inscriptionGardien"  > 
+                            <input type="submit" style="margin-left:100px;"value="S'inscrire" class="submit" name="inscriptionGardien"  > 
                             <input type="reset" value="Annuler" class="submit" > 
                         </div>
                     </form>

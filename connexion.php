@@ -56,7 +56,6 @@ session_start();
     <title>Pet Care by Group 4</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet"  href="assets/css/connection.css ">
 </head>
 
@@ -97,17 +96,18 @@ session_start();
                         }
                      ?>
                       <div class="form-item">
-                            <input type="submit" value="Se connecter" class="submit" name="connexionUser"  > 
+                            <input style="margin-left:100px;" type="submit" value="Se connecter" class="submit" name="connexionUser"  > 
                         </div>
                     </form>
                 </main>
+                <!--
                 <div class="modal fade" id="myModal" role="dialog">
                     <div class="modal-dialog modal-sm">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                                 <h4 class="modal-title">Création d'un compte client</h4>
-                            </div>
+                            </div
                             <div class="modal-body">
                                 <p>
                                     <button type="button" class="btn btn-default btn-lg" id="myBtn1"><a href="inscriptionClient.php">Création d'un compte Client</a> </button>
@@ -122,9 +122,15 @@ session_start();
                         </div>
                     </div>
                 </div>
+                -->
                 <footer>
                     <p>Mot de passe oublié ? <a href="motDePasseOublie.php">Recupérer mon mot de passe </a></p>
-                    <p>Vous n'avez pas de compte ? <a href="#" type="button" data-toggle="modal" data-target="#myModal"> Je crée mon compte</a></p>
+                    <p>Devenir client ?
+                       <a href="inscriptionClient.php">Création d'un compte Client</a>
+                    </p>
+                    <p>Devenir gardien particulier ?
+                         <a href="inscriptionGardien.php">Création d'un compte Gardien</a>
+                    </p>
                     <p> <a href="index.php">Aller à la page d'accueil</a>  </p>
                 </footer>
                 <i class="wave"></i>
@@ -132,12 +138,6 @@ session_start();
         </div>
     </div>
 
-
-
-
-    
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
 
 </body>
 

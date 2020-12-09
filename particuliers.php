@@ -61,69 +61,69 @@
             </div>
         </div>
 
-        <!-- Navigation -->
         <nav class="navbar navbar-default navbar-fixed-top fadeInDown" data-wow-delay="0.5s">
-            <div class="top-bar smoothie hidden-xs">
-                <div class="container">
-                    <div class="clearfix">
-                       
-
-                        <div class="pull-right text-right">
-                            <ul class="list-inline nav navbar-nav navbar-right">
-                                <li>
-                                    <div><a href="#">Sign in</a></div>
-                                </li>
-                                 <li>
-                                    <div><a href="#">Sign up</a></div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header page-scroll">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navigation">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand smoothie logo logo-light" href="index.php"><img src="assets/img/logo.png" alt="logo"></a>
-                    <a class="navbar-brand smoothie logo logo-dark" href="index.php"><img src="assets/img/logo_reverse.png" alt="logo"></a>
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="main-navigation">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <a href="index.php">ACCUEIL</a>
-						</li>
-                        <li class="dropdown">
-                            <a href="#"  data-hover="dropdown" data-toggle="dropdown">Services<span class="pe-7s-angle-down"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                               <li><a href="chenils.php">Chenils</a></li>
-                                <li><a href="particuliers.php">Particuliers</a></li>
-                            </ul>
-                        </li>
-						<li class="dropdown">
-                            <a href="#"  data-hover="dropdown" data-toggle="dropdown">Urgences<span class="pe-7s-angle-down"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="urgence1.html">Urgence 1</a></li>
-                                <li><a href="urgence1.html">Urgence 2</a></li>
-                                <li><a href="urgence1.html">Urgence 3</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="about.html">A PROPOS</a>
+    <div class="top-bar smoothie hidden-xs">
+        <div class="container">
+            <div class="clearfix">
+                <div class="pull-right text-right" >
+                    <ul class="list-inline nav navbar-nav navbar-right">
+                         <li>
+                            <div><a href="connexion.php">Se Connecter</a></div>
                         </li>
                     </ul>
                 </div>
-                <!-- /.navbar-collapse -->
             </div>
-            <!-- /.container-fluid -->
-        </nav>
+        </div>
+    </div>
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand smoothie logo logo-light" href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
+            <a class="navbar-brand smoothie logo logo-dark" href="index.html"><img src="assets/img/logo_reverse.png" alt="logo"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="index.php">ACCUEIL</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#"  data-hover="dropdown" data-toggle="dropdown">Services<span class="pe-7s-angle-down"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="chenils.php">Chenils</a></li>
+                        <li><a href="particuliers.php">Particuliers</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#"  data-hover="dropdown" data-toggle="dropdown">Inscription<span class="pe-7s-angle-down"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="inscriptionClient.php">Client</a></li>
+                        <li><a href="inscriptionGardien.php">Gardien</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="Pertedechien.php">Perte de chien</a>
+                   
+                </li>
+                <li class="dropdown">
+                    <a href="about.html">A PROPOS</a>
+                </li>
+               
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
 
         <div id="search-wrapper">
             <button type="button" class="close">×</button>
@@ -260,40 +260,53 @@
 
      
 
-        <footer class="white-wrapper">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <ul class="list-inline social-links wow">
-                            <li>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-pinterest"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-dribbble"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-behance"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <hr class="thin-hr" />
-
-                    <div class="col-md-12 text-center wow">
-                        <span class="copyright">Copyright 2019. Designed by DISTINCTIVE THEMES</span>
-                    </div>
+        <section class="opaqued light-opaqued parallax">
+            <div class="section-inner">
+                
                 </div>
             </div>
-        </footer>
+        </section>
+
+        <div id="footer-wrapper">
+            <section class="dark-wrapper">
+                <div class="section-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="widget about-us-widget">
+                                    <h4 class="widget-title"><strong>Informations</strong> Complémentaires</h4>
+                                    <p>Ce site est un projet du cursus Master 1 Mention MIAGE Ingéniere Métiers de <a href="https://www.ut-capitole.fr/" target="_blank">l'Université Toulouse Capitole </a>. Il a été conçu par ses étudiants dans le but de se perfectionner dans la gestion et création d'un site web. </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="widget">
+                                    <h4 class="widget-title"><strong>Autres</strong> Sites</h4>
+                                    <div>
+                                        <div class="media">
+                                            <ul><li><a href="https://www.empruntemontoutou.com/?gclid=CjwKCAiAv4n9BRA9EiwA30WND0gjCjLI_oBaON-o6RpIJL7XGQRMvC_FsncqLz8XFwd205phtP3ZsRoCxfUQAvD_BwE" target="_blank">Emprunte mon toutou</a></li>
+                                                <li><a href="https://emmenetonchien.com/" target="_blank">Emmene ton chien</a></li>
+                                                <li><a href="https://www.pourmonchien.fr/" target="_blank">Pour Mon Chien</a></li>
+                                                <li><a href="https://www.chien.com/" target="_blank">Chien.com</a></li></ul>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="widget">
+                                    <h4 class="widget-title">Site d'information</h4>
+                                    <div class="tagcloud">
+                                        <a href="http://etu-web2/~22003366/petcare"  title="3 topics">
+                                            Plus d'information sur PETCARE
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+    </div>
 
     </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
