@@ -88,12 +88,8 @@
                             </ul>
                         </li>
 						<li class="dropdown">
-                            <a href="#"  data-hover="dropdown" data-toggle="dropdown">Urgences<span class="pe-7s-angle-down"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="urgence1.html">Urgence 1</a></li>
-                                <li><a href="urgence1.html">Urgence 2</a></li>
-                                <li><a href="urgence1.html">Urgence 3</a></li>
-                            </ul>
+                            <a href="Pertedechien.php">Perte de chien</a>
+                           
                         </li>
                         <li class="dropdown">
                             <a href="about.html">A PROPOS</a>
