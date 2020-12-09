@@ -129,7 +129,7 @@
                     ?>
 
                     <div class="form-item">
-                        <input type="submit" value="S'inscrire" name="formInscription" class="submit" >
+                        <input type="submit" style="margin-left:100px;" value="S'inscrire" name="formInscription" class="submit" >
                         <input type="reset" value="Annuler" class="submit" >  
                     </div>
                 </form>

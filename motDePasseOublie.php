@@ -82,7 +82,7 @@
                         </div>
                         
                       <div class="form-item">
-                            <input type="submit" value="Je recupère" class="submit" name="recupMail"  > 
+                            <input style="margin-left:160px;" type="submit" value="Je recupère" class="submit" name="recupMail"  > 
                         </div>
 
                         <?php

@@ -165,7 +165,7 @@
                          <?php
 
                             require('connexionBD.php');
-                            $sql = "SELECT * FROM GARDIEN";
+                            $sql = "SELECT * FROM GARDIENSPART";
                             $result = $bdd->query($sql);
                             while($row = $result->fetch()){
                            // echo "Nom de Chenils: " . $row["CHENNOM"]. " - Adresse: " . $row["CHENADR"]. " " . $row["CHENTEL"]. "<br>";
@@ -173,9 +173,9 @@
                                         <div class='icon-box-1 match-height mb30'>
                                             <img class='chenils' src =". $row["GPPIC"].">
                                             <div class='content-area'>
-                                                <h3 class='title'>" . $row["prenom_gardien"]. "</h3> 
+                                                <h3 class='title'>" . $row["GPPRENOM"]. "</h3> 
                                                 <div class='content'>";
-                                                        if($row["GPEVAL"] == 0){
+                                                        if($row["GPEVAL"] == NULL){
                                                             echo"<h4>✫✫✫✫✫ </h4>";
                                                         }else if($row["GPEVAL"] == 5){
                                                              echo"<h4>✭✭✭✭✭ </h4>";
@@ -189,12 +189,12 @@
                                                              echo"<h4>✭✫✫✫✫ </h4>";
                                                         }
                                                          echo"
-                                                            Adresse : ".$row["nom_voie_gardien"]." <br/>
-                                                            TEL : ".$row["Tel_gardien"]." </div>";
+                                                            Adresse : ".$row["GPADR"]." <br/>
+                                                            TEL : ".$row["GPTEL"]." </div>";
                                                              echo" <p class='w3-large w3-text-theme'><b><i class='fa-fw w3-margin-right w3-text-teal'></i>
-                                                                <button style='float:right; padding:7px 7px;  '><a href='#myModal'  data-toggle='modal' data-target='#myModal' data-idgp=".$row["id_gardien"]."> ";
+                                                                <button style='float:right; padding:7px 7px;  '><a href='#myModal'  data-toggle='modal' data-target='#myModal' data-idgp=".$row["IDGP"]."> ";
                                                                 
-                                                                 if($row["genre_gardien"] == "Femme"){
+                                                                 if($row["GPGENRE"] == "F"){
                                                                     echo"Contacter la gardienne  </a> </button></b> </p>";
                                                                 }else {
                                                                     echo"Contacter le gardien </a> </button></b> </p>";

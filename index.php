@@ -74,13 +74,6 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
                             <a href="index.php">ACCUEIL</a>
-						</li>
-                        <li class="dropdown">
-                            <a href="#"  data-hover="dropdown" data-toggle="dropdown">Services<span class="pe-7s-angle-down"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="chenils.php">Chenils</a></li>
-                                <li><a href="particuliers.php">Particuliers</a></li>
-                            </ul>
                         </li>
                         <li class="dropdown">
                             <a href="#"  data-hover="dropdown" data-toggle="dropdown">Inscription<span class="pe-7s-angle-down"></span></a>
@@ -89,6 +82,14 @@
                                 <li><a href="inscriptionGardien.php">Gardien</a></li>
                             </ul>
                         </li>
+                        <li class="dropdown">
+                            <a href="#"  data-hover="dropdown" data-toggle="dropdown">Services<span class="pe-7s-angle-down"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="chenils.php">Chenils</a></li>
+                                <li><a href="particuliers.php">Particuliers</a></li>
+                            </ul>
+                        </li>
+                        
 						<li class="dropdown">
                             <a href="Pertedechien.php">Perte de chien</a>
                            

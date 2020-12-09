@@ -64,67 +64,68 @@
 
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-fixed-top fadeInDown" data-wow-delay="0.5s">
-            <div class="top-bar smoothie hidden-xs">
-                <div class="container">
-                    <div class="clearfix">
-                       
-
-                        <div class="pull-right text-right">
-                            <ul class="list-inline nav navbar-nav navbar-right">
-                                <li>
-                                    <div><a href="#">Sign in</a></div>
-                                </li>
-                                 <li>
-                                    <div><a href="#">Sign up</a></div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+    <div class="top-bar smoothie hidden-xs">
+        <div class="container">
+            <div class="clearfix">
+                <div class="pull-right text-right" >
+                    <ul class="list-inline nav navbar-nav navbar-right">
+                         <li>
+                            <div><a href="connexion.php">Se Connecter</a></div>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header page-scroll">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navigation">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand smoothie logo logo-light" href="index.php"><img src="assets/img/logo.png" alt="logo"></a>
-                    <a class="navbar-brand smoothie logo logo-dark" href="index.php"><img src="assets/img/logo_reverse.png" alt="logo"></a>
-                </div>
+        </div>
+    </div>
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand smoothie logo logo-light" href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
+            <a class="navbar-brand smoothie logo logo-dark" href="index.html"><img src="assets/img/logo_reverse.png" alt="logo"></a>
+        </div>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="main-navigation">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="main-navigation">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
                             <a href="index.php">ACCUEIL</a>
-						</li>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#"  data-hover="dropdown" data-toggle="dropdown">Inscription<span class="pe-7s-angle-down"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="inscriptionClient.php">Client</a></li>
+                                <li><a href="inscriptionGardien.php">Gardien</a></li>
+                            </ul>
+                        </li>
                         <li class="dropdown">
                             <a href="#"  data-hover="dropdown" data-toggle="dropdown">Services<span class="pe-7s-angle-down"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                               <li><a href="chenils.php">Chenils</a></li>
+                                <li><a href="chenils.php">Chenils</a></li>
                                 <li><a href="particuliers.php">Particuliers</a></li>
                             </ul>
                         </li>
+                        
 						<li class="dropdown">
-                            <a href="#"  data-hover="dropdown" data-toggle="dropdown">Urgences<span class="pe-7s-angle-down"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="urgence1.html">Urgence 1</a></li>
-                                <li><a href="urgence1.html">Urgence 2</a></li>
-                                <li><a href="urgence1.html">Urgence 3</a></li>
-                            </ul>
+                            <a href="Pertedechien.php">Perte de chien</a>
+                           
                         </li>
                         <li class="dropdown">
                             <a href="about.html">A PROPOS</a>
                         </li>
+                       
+
                     </ul>
                 </div>
-                <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container-fluid -->
-        </nav>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
 
         <div id="search-wrapper">
             <button type="button" class="close">×</button>
