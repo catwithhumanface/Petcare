@@ -1,0 +1,133 @@
+body{
+    margin: 0;
+    padding: 0;;
+    height: 100vh;
+    overflow: hidden;
+   /* background-color:  302f2f;*/
+}
+
+.centre{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+   border-radius: 10px;
+   /*background: white;*/
+}
+
+.centre form {
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .champs{
+    position: relative;
+    border-bottom:  2px solid #adadad;
+    margin: 10px 0;
+}
+
+.champs input, .legenre option{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.champs label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.genre label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+
+
+select{
+    border: none;
+}
+.champs span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #f6f9fa;
+    transition: .5s;
+}
+
+.champs input:focus ~ label,
+.champs input:valid ~ label {
+    top: -5px;
+    color: #f6f9fa ;
+} 
+
+.genre input:focus ~ label,
+.genre input:valid ~ label{
+    top: -5px;
+    
+}
+
+.champs input:focus ~ span::before ,
+.champs input:valid ~ span::before{
+    width: 100%;
+}
+
+
+
+input[type="submit"],input[type="reset"]{
+    width: 100%;
+    height: 50px;
+    border: 2px solid black;
+    background: #a7a8a8;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #f8fafc;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="reset"]{
+    margin: 3px;
+}
+input[type="submit"]:hover, input[type="reset"]:hover{
+    border-color: #2691d9;
+    transition: .5s;
+}
+
+.connexion{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.connexion a{
+    color:#2691d9;
+    text-decoration: none;
+}
+
+.connexion a:hover{
+    text-decoration: underline;
+    
+}
