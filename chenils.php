@@ -90,15 +90,15 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand smoothie logo logo-light" href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
-                    <a class="navbar-brand smoothie logo logo-dark" href="index.html"><img src="assets/img/logo_reverse.png" alt="logo"></a>
+                    <a class="navbar-brand smoothie logo logo-light" href="index.php"><img src="assets/img/logo.png" alt="logo"></a>
+                    <a class="navbar-brand smoothie logo logo-dark" href="index.php"><img src="assets/img/logo_reverse.png" alt="logo"></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="main-navigation">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-                            <a href="index.html">Home</a>
+                            <a href="index.php">ACCUEIL</a>
 						</li>
                         <li class="dropdown">
                             <a href="#"  data-hover="dropdown" data-toggle="dropdown">Services<span class="pe-7s-angle-down"></span></a>
@@ -115,20 +115,6 @@
                                 <li><a href="urgence1.html">Urgence 3</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown">
-                            <a href="forum.html">Forum</a>
-                        </li>
-						<!-- à trouver dans Mon compte-->
-						<!--
-                        <li class="dropdown">
-                            <a href="about.html">Documents
-							<span class="pe-7s-angle-down"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="header-1.html">Carnets</a></li>
-                                <li><a href="header-2.html">Mes favoris</a></li>
-                            </ul>
-                        </li>
-						-->
                         <li class="dropdown">
                             <a href="about.html">About</a>
                         </li>
@@ -193,13 +179,27 @@
 	<script type="text/javascript">
             // On initialise la latitude et la longitude de Paris (centre de la carte)
 			var villes = {
-				"Paris": { "lat": 48.852969, "lon": 2.349903 },
-				"Brest": { "lat": 48.383, "lon": -4.500 },
-				"Quimper": { "lat": 48.000, "lon": -4.100 },
-				"Bayonne": { "lat": 43.500, "lon": -1.467 },
 				"Toulouse": { "lat": 43.604652, "lon": 1.444209},
-				"UT1" : { "lat": 43.606912214600136, "lon": 1.4371872994545967}
-				}
+                "Berger Allemand Du Val d’Esquein":{"lat":43.17866145372998,"lon":1.192536584596153},
+                "Centre canin du Haut de l’Arize":{"lat":43.17881141532664,"lon":1.1992853569524926},
+                "Chen’Isle Marin Casties":{"lat":43.32720041449501,"lon":0.9698096412471374},
+                "Chenil du Jagan":{"lat":43.766714190750996,"lon":1.2641676533690904},
+                "Chenil L’Orée du Bois":{"lat":43.64939005193492,"lon":1.518053828801514},
+                "Complexe canin et félin des Wallabies":{"lat":43.74907673716201,"lon":1.5666614134496444},
+                "De la forêt noir et feu":{"lat":43.52548643701837,"lon":1.7708889134427404},
+                "Domaine du Coustalats":{"lat":43.09831929767817,"lon":0.5554265576089428},
+                "La Bonne Patte":{"lat":42.95381702873456,"lon":0.652976169245772},
+                "La Source aux Perdrix":{"lat":43.259529032965176,"lon":1.0218733827475057},
+                "Le Domaine de Cocagne":{"lat":43.676803790477486,"lon":7.139345226939819},
+                "Le Grand Cèdre":{"lat":43.294032111415405,"lon":1.0393627269279346},
+                "Les Anges Gardiens":{"lat":43.85269033039945,"lon":1.5363219000243866},
+                "Ma truffe au Soleil":{"lat":43.38252033517485,"lon":1.4237099980948005},
+                "Occitanis":{"lat":43.477768,"lon":2.003290},
+                "Pension des Arnaudas":{"lat":43.51058161941875,"lon":1.0749014115911395},
+                "Pension en Sigol":{"lat":43.47868896425133,"lon":1.7713080827542542},
+                "Pension Malause":{"lat":43.557481254545266,"lon":1.60862709995133},
+                "Wolff.D-Concept":{"lat":43.492067297836705,"lon":1.5454450999493377}
+            }
             var lat = 43.604652;
             var lon = 1.444209;
             var macarte = null;
@@ -237,32 +237,20 @@
 	</script>
 	
                          <?php
-                      
-                            $servername = "localhost";
-                            $database = "petcare";
-                            $username = "root";
-                            $password = "mysql";
+                            require('connexionBD.php');
+                            
+                          //$con = mysqli_connect();
+                        
+                            $sql = "SELECT CHENNOM, CHENADR,CHENMAIL, CHENSW, CHENTEL, CHENPIC FROM CHENILS";
+                            
+                           $result = $bdd->query($sql);
+                          // $result = mysqli_query($bdd, $sql);
+                          
 
-                            // Create connection
-
-                            $conn = mysqli_connect($servername, $username, $password, $database);
-                           
-                            // Check connection
-                            // Style procédural
-                            mysqli_set_charset( $conn, "utf8");
-
-                            if ($conn->connect_error) {
-                            die("Connection failed: " . $conn->connect_error);
-                            }else{
-                            // echo "connected !";
-                            }
-
-                           $sql = "SELECT CHENNOM, CHENADR,CHENMAIL, CHENSW, CHENTEL, CHENPIC FROM CHENILS";
-                           $result = $conn->query($sql);
-                           
-                           if ($result->num_rows > 0) {
                             // output data of each row
-                            while($row = $result->fetch_assoc()) {
+                           // while($row = $result->fetch_assoc()) {
+                           // while($row = mysqli_fetch_array($result)){
+                            while($row = $result->fetch()){
                            // echo "Nom de Chenils: " . $row["CHENNOM"]. " - Adresse: " . $row["CHENADR"]. " " . $row["CHENTEL"]. "<br>";
                             echo " <div class='col-sm-4 wow fadeIn' data-wow-delay='0.2s' style='height:500px;'>
                             <div class='icon-box-1 match-height mb30'>
@@ -286,7 +274,7 @@
                             </div>
                          </div> ";
                           }
-                       } 
+                       
 
 			?>
 

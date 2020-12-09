@@ -1,21 +1,3 @@
-<?php
-$servername = "localhost";
-$database = "petcare";
-$username = "root";
-$password = "mysql";
-
-// Create connection
-
-$conn = mysqli_connect($servername, $username, $password, $database);
-
-// Check connection
-
-if ($conn->connect_error) {
-die("Connection failed: " . $conn->connect_error);
-}
-
-mysqli_close($conn);
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -96,7 +78,7 @@ mysqli_close($conn);
                 <div class="collapse navbar-collapse" id="main-navigation">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-                            <a href="index.php">Home</a>
+                            <a href="index.php">ACCUEIL</a>
 						</li>
                         <li class="dropdown">
                             <a href="#"  data-hover="dropdown" data-toggle="dropdown">Services<span class="pe-7s-angle-down"></span></a>
@@ -114,21 +96,7 @@ mysqli_close($conn);
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="forum.html">Forum</a>
-                        </li>
-						<!-- à trouver dans Mon compte-->
-						<!--
-                        <li class="dropdown">
-                            <a href="about.html">Documents
-							<span class="pe-7s-angle-down"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="header-1.html">Carnets</a></li>
-                                <li><a href="header-2.html">Mes favoris</a></li>
-                            </ul>
-                        </li>
-						-->
-                        <li class="dropdown">
-                            <a href="about.html">About</a>
+                            <a href="about.html">A PROPOS</a>
                         </li>
                        
 
@@ -172,7 +140,7 @@ mysqli_close($conn);
                 </div>
             </div>
 
-            <div class="col-sm-6 nopadding-lr dark-wrapper remove-opacqued-bg opaqued background-cover match-height" style="background-image: url('assets/img/bg/app1.jpg');" data-mh="promo-inner">
+            <div class="col-sm-6 nopadding-lr dark-wrapper remove-opacqued-bg opaqued background-cover match-height" style="background-image: url('assets/img/bg/app1.jpg'); " data-mh="promo-inner">
                 <div class="dark-opaqued section-inner pad-sides-60 text-right promo-inner"></div>
             </div>
         </div>

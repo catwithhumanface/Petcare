@@ -496,8 +496,8 @@ fieldset[disabled] .btn-primary.active {
 }
 
 .navbar-brand.logo img {
-    max-height: 20px;
-    top: -3px;
+    max-height: 70px;
+    top: -30px;
     position: relative;
 }
 
@@ -2434,8 +2434,7 @@ h3.siteto{
 }
 
 .imgback{
-    background-image:url('../img/bg/app1.jpg');
+    background-image:url('../img/bg/banner5.png');
     background-size: 1430 406;
       background-color: rgba(68, 34, 69, 0.9);
-
 }

@@ -90,15 +90,15 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand smoothie logo logo-light" href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
-                    <a class="navbar-brand smoothie logo logo-dark" href="index.html"><img src="assets/img/logo_reverse.png" alt="logo"></a>
+                    <a class="navbar-brand smoothie logo logo-light" href="index.php"><img src="assets/img/logo.png" alt="logo"></a>
+                    <a class="navbar-brand smoothie logo logo-dark" href="index.php"><img src="assets/img/logo_reverse.png" alt="logo"></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="main-navigation">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-                            <a href="index.php">Home</a>
+                            <a href="index.php">ACCUEIL</a>
 						</li>
                         <li class="dropdown">
                             <a href="#"  data-hover="dropdown" data-toggle="dropdown">Services<span class="pe-7s-angle-down"></span></a>
@@ -116,21 +116,7 @@
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="forum.html">Forum</a>
-                        </li>
-						<!-- à trouver dans Mon compte-->
-						<!--
-                        <li class="dropdown">
-                            <a href="about.html">Documents
-							<span class="pe-7s-angle-down"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="header-1.html">Carnets</a></li>
-                                <li><a href="header-2.html">Mes favoris</a></li>
-                            </ul>
-                        </li>
-						-->
-                        <li class="dropdown">
-                            <a href="about.html">About</a>
+                            <a href="about.html">A PROPOS</a>
                         </li>
                     </ul>
                 </div>
@@ -149,7 +135,7 @@
             </div>
         </div>
 
-        <section class="dark-wrapper opaqued parallax" data-parallax="scroll" data-image-src="assets/img/bg/bg2.jpg" data-speed="0.7">
+        <section class="dark-wrapper opaqued parallax imgback">
             <div class="section-inner pad-top-200">
                 <div class="container">
                     <div class="row">
@@ -176,37 +162,11 @@
 
 
                          <?php
-                            $servername = "localhost";
-                            $database = "petcare";
-                            $username = "root";
-                            $password = "mysql";
 
-                            // Create connection
-
-                            
-                            $conn = mysqli_connect($servername, $username, $password, $database);
-                           
-                            // Check connection
-                            
-
-                            
-                            // Style procédural
-                            mysqli_set_charset( $conn, "utf8");
-
-
-                            if ($conn->connect_error) {
-                            die("Connection failed: " . $conn->connect_error);
-                            }else{
-                            // echo "connected !";
-                            }
-
-                            //$sql = "SELECT CHENNOM, CHENADR, CHENTEL, Chenpic FROM CHENILS";
-                              $sql = "SELECT * FROM GARDIENSPART";
-                           $result = $conn->query($sql);
-                           
-                           if ($result->num_rows > 0) {
-                            // output data of each row
-                            while($row = $result->fetch_assoc()) {
+                            require('connexionBD.php');
+                            $sql = "SELECT * FROM GARDIENSPART";
+                            $result = $bdd->query($sql);
+                            while($row = $result->fetch()){
                            // echo "Nom de Chenils: " . $row["CHENNOM"]. " - Adresse: " . $row["CHENADR"]. " " . $row["CHENTEL"]. "<br>";
                                 echo "<div class='col-sm-4 wow fadeIn' data-wow-delay='0.2s' style='height:500px;'>
                                         <div class='icon-box-1 match-height mb30'>
@@ -246,7 +206,7 @@
                                         </div>
                                         
                                         ";
-                          }
+                          
                        } 
 
 			?>
