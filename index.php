@@ -44,22 +44,7 @@
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-fixed-top fadeInDown" data-wow-delay="0.5s">
             <div class="top-bar smoothie hidden-xs">
-                <div class="container">
-                    <div class="clearfix">
-                      
-
-                        <div class="pull-right text-right" >
-                            <ul class="list-inline nav navbar-nav navbar-right">
-                                <li>
-                                    <div><a href="#">Sign in</a></div>
-                                </li>
-                                 <li>
-                                    <div><a href="#">Sign up</a></div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            
             </div>
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -85,6 +70,13 @@
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="chenils.php">Chenils</a></li>
                                 <li><a href="particuliers.php">Particuliers</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#"  data-hover="dropdown" data-toggle="dropdown">Inscription<span class="pe-7s-angle-down"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="inscriptionClient.php">Client</a></li>
+                                <li><a href="inscriptionGardien.php">Gardien</a></li>
                             </ul>
                         </li>
 						<li class="dropdown">
