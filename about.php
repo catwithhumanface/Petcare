@@ -47,10 +47,21 @@
             <div class="clearfix">
                 <div class="pull-right text-right" >
                     <ul class="list-inline nav navbar-nav navbar-right">
-                         <li>
-                            <div><a href="connexion.php">Se Connecter</a></div>
-                        </li>
-                    </ul>
+                        <li><div>
+                         <?php
+                            require('connexionBD.php');
+                            session_start();
+                            if (isSet($_SESSION['id_client'])) {
+                                echo
+                                "<a href='profilClient.php?id_client=".$_SESSION['id_client']."'>Mon Compte";
+                            }else{
+                               echo
+                               " <a href='connexion.php'> Se Connecter";
+                               
+                            };?>
+                            </a></div>
+                            </li>
+                        </ul>
                 </div>
             </div>
         </div>
@@ -94,7 +105,7 @@
                    
                 </li>
                 <li class="dropdown">
-                    <a href="about.html">A PROPOS</a>
+                    <a href="about.php">A PROPOS</a>
                 </li>
                
 
