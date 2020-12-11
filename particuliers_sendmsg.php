@@ -11,9 +11,9 @@
                                 $idgp = $_POST['idgp'];
                                 $usrname = $_POST['usrname'];
                                 $mail = $_POST['mail'];
-                                $msg =$msg." by ".$usrname. "mail : ".$mail ;
+                                
                                  $sql = "INSERT INTO `messages`(`MESSTEXTE`, `id_client`, `id_gardien`) VALUES ";
-                                $sql = $sql."('$msg', '$idu', '$idgp')";
+                                $sql = $sql."('$msg', $idu, $idgp)";
                                 //$result = $bdd->query($sql);
                                 if($bdd -> query($sql)) {
                                     echo"<script>alert('Votre message a bien été envoyé.');</script>";

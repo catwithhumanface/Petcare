@@ -75,7 +75,8 @@
                                 session_start();
                                 if (isSet($_SESSION['id_client'])) {
                                     echo
-                                    "<a href='profilClient.php?id_client=".$_SESSION['id_client']."'>Mon Compte";
+                                    "<a href='deconnexion.php'>Déconnexion</a><a href='profilClient.php?id_client=".$_SESSION['id_client']."'>Mon Compte</a>";
+                                   
                                 }else{
                                    echo
                                    " <a href='connexion.php'> Se Connecter";
@@ -97,8 +98,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand smoothie logo logo-light" href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
-            <a class="navbar-brand smoothie logo logo-dark" href="index.html"><img src="assets/img/logo_reverse.png" alt="logo"></a>
+            <a class="navbar-brand smoothie logo logo-light" href="index.php"><img src="assets/img/logo.png" alt="logo"></a>
+            <a class="navbar-brand smoothie logo logo-dark" href="index.php"><img src="assets/img/logo_reverse.png" alt="logo"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->

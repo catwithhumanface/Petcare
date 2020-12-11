@@ -18,8 +18,8 @@ session_start();
             if($ClientExist == 1){ 
                 $ClientInfo = $reqClient->fetch();
                 $_SESSION['id_client'] = $ClientInfo['id_client'];
-                header("Location:index.php");
-               //header("Location:profilClient.php?id_client=".$_SESSION['id_client']);
+                //header("Location:index.php");
+               header("Location:profilClient.php?id_client=".$_SESSION['id_client']);
             }else{
                     $erreur = "Mauvais identifiants (Mot de passe ou mail incorrect";
             }

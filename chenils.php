@@ -68,15 +68,19 @@
                 <div class="pull-right text-right" >
                 <ul class="list-inline nav navbar-nav navbar-right">
                             <li><div>
-                             <?php
+                            <?php
                                 require('connexionBD.php');
                                 session_start();
                                 if (isSet($_SESSION['id_client'])) {
                                     echo
-                                    "<a href='profilClient.php?id_client=".$_SESSION['id_client']."'>Mon Compte";
+                                    "<a href='deconnexion.php'>Déconnexion</a><a href='profilClient.php?id_client=".$_SESSION['id_client']."'>Mon Compte</a>";
+                                   
+                                }else if(isSet($_SESSION['id_gardien'])){
+                                    echo
+                                    "<a href='deconnexion.php'>Déconnexion</a><a href='profilGardien.php?id_gardien=".$_SESSION['id_gardien']."'>Mon Compte</a>";
                                 }else{
                                    echo
-                                   " <a href='connexion.php'> Se Connecter";
+                                   " <a href='connexion.php'> Se Connecter</a>";
                                    
                                 };?>
                                 </a></div>
@@ -95,8 +99,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand smoothie logo logo-light" href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
-            <a class="navbar-brand smoothie logo logo-dark" href="index.html"><img src="assets/img/logo_reverse.png" alt="logo"></a>
+            <a class="navbar-brand smoothie logo logo-light" href="index.php"><img src="assets/img/logo.png" alt="logo"></a>
+            <a class="navbar-brand smoothie logo logo-dark" href="index.php"><img src="assets/img/logo_reverse.png" alt="logo"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -321,9 +325,10 @@
                                 <div class="widget">
                                     <h4 class="widget-title">Site d'information</h4>
                                     <div class="tagcloud">
-                                        <a href="http://etu-web2/~22003366/petcare"  title="3 topics">
+                                    <a href="http://etu-web2/~21602823/Presentation_DogCare"  title="3 topics">
                                             Plus d'information sur PETCARE
                                         </a>
+                                           
                                     </div>
                                 </div>
                             </div>

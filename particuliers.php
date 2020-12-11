@@ -68,15 +68,19 @@
                 <div class="pull-right text-right" >
                 <ul class="list-inline nav navbar-nav navbar-right">
                             <li><div>
-                             <?php
+                                <?php
                                 require('connexionBD.php');
                                 session_start();
                                 if (isSet($_SESSION['id_client'])) {
                                     echo
-                                    "<a href='profilClient.php?id_client=".$_SESSION['id_client']."'>Mon Compte";
+                                    "<a href='deconnexion.php'>Déconnexion</a><a href='profilClient.php?id_client=".$_SESSION['id_client']."'>Mon Compte</a>";
+                                   
+                                }else if(isSet($_SESSION['id_gardien'])){
+                                    echo
+                                    "<a href='deconnexion.php'>Déconnexion</a><a href='profilGardien.php?id_gardien=".$_SESSION['id_gardien']."'>Mon Compte</a>";
                                 }else{
                                    echo
-                                   " <a href='connexion.php'> Se Connecter";
+                                   " <a href='connexion.php'> Se Connecter</a>";
                                    
                                 };?>
                                 </a></div>
@@ -95,8 +99,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand smoothie logo logo-light" href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
-            <a class="navbar-brand smoothie logo logo-dark" href="index.html"><img src="assets/img/logo_reverse.png" alt="logo"></a>
+            <a class="navbar-brand smoothie logo logo-light" href="index.php"><img src="assets/img/logo.png" alt="logo"></a>
+            <a class="navbar-brand smoothie logo logo-dark" href="index.php"><img src="assets/img/logo_reverse.png" alt="logo"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -223,7 +227,14 @@
 
 			?>
             
-        
+            <?php
+                if (isSet($_SESSION['id_client'])) {
+                    $getid = intval($_SESSION['id_client']);
+                    $reqClient = $bdd->prepare("SELECT * FROM client WHERE id_client=?");
+                    $reqClient-> execute(array($getid));
+                    $userInfo = $reqClient->fetch();
+                }
+            ?>
 
              <div class="modal fade" id="myModal" role="dialog">
                             <div class="modal-dialog modal-md">
@@ -234,14 +245,17 @@
                                     </div>
                                     <div class="modal-body" style="padding:20px 30px;">
                                         <form role="form" method="POST" action="particuliers_sendmsg.php">
-                                        <input type="hidden" name="idgp" value="" > 
+                                        <input type="hidden" name="idgp" value=""> 
                                             <div class="form-group">
                                                 <label for="usrname"><span class="glyphicon glyphicon-user"></span> Nom et Prénom</label>
-                                                <input type="text" class="form-control" name="usrname" id="usrname" value="" >
+                                                <input type="text" class="form-control" name="usrname" id="usrname" value="<?php if(isset($userInfo) and $userInfo != '') echo $userInfo['prenom_client']. $userInfo['nom_client'];?>" readonly>
                                             </div>
                                             <div class="form-group">
                                                 <label for="usrname"><span class="glyphicon glyphicon-envelope"></span> Adresse mail</label>
-                                                <input type="text" class="form-control" name="mail" id="mail" value="" >
+                                                <input type="text" class="form-control" name="mail" id="mail" value="<?php if(isset($userInfo) and $userInfo != '') echo $userInfo['mail_client'];?>" readonly>
+                                                
+
+
                                             </div>
                                             
                                             <div class="form-group">
@@ -306,7 +320,7 @@
                                 <div class="widget">
                                     <h4 class="widget-title">Site d'information</h4>
                                     <div class="tagcloud">
-                                        <a href="http://etu-web2/~22003366/petcare"  title="3 topics">
+                                        <a href="http://etu-web2/~21602823/Presentation_DogCare"  title="3 topics">
                                             Plus d'information sur PETCARE
                                         </a>
                                     </div>
