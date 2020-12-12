@@ -137,7 +137,7 @@
                 <div class="intro-text vertical-center text-left smoothie">
                     <div class="intro-heading wow fadeIn heading-font" data-wow-delay="0.2s">Bienvenu dans PetCare</div>
                     <div class="intro-sub-heading wow fadeIn secondary-font" data-wow-delay="0.4s">Nous somme ici pour vos <span class="rotate">Meilleurs amis, toutous, compagnons de toujours, canailles </span></div>
-                    <a href="about.html" class="btn btn-primary btn-white mt30 page-scroll" data-wow-delay="0.6s">Apprenez-en plus</a>
+                    <a href="about.php" class="btn btn-primary btn-white mt30 page-scroll" data-wow-delay="0.6s">Apprenez-en plus</a>
                 </div>
             </div>
         </header>
