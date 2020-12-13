@@ -304,41 +304,51 @@
 
      
 
-        <footer class="white-wrapper">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <ul class="list-inline social-links wow">
-                            <li>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-pinterest"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-dribbble"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-behance"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <hr class="thin-hr" />
-
-                    <div class="col-md-12 text-center wow">
-                        <span class="copyright">Copyright 2019. Designed by DISTINCTIVE THEMES</span>
-                    </div>
+        <section class="opaqued light-opaqued parallax">
+            <div class="section-inner">
+                
                 </div>
             </div>
-        </footer>
+        </section>
 
+        <div id="footer-wrapper">
+            <section class="dark-wrapper">
+                <div class="section-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="widget about-us-widget">
+                                    <h4 class="widget-title"><strong>Informations</strong> Complémentaires</h4>
+                                    <p>Ce site est un projet du cursus Master 1 Mention MIAGE Ingéniere Métiers de <a href="https://www.ut-capitole.fr/" target="_blank">l'Université Toulouse Capitole </a>. Il a été conçu par ses étudiants dans le but de se perfectionner dans la gestion et création d'un site web. </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="widget">
+                                    <h4 class="widget-title"><strong>Autres</strong> Sites</h4>
+                                    <div>
+                                        <div class="media">
+                                            <ul><li><a href="https://www.empruntemontoutou.com/?gclid=CjwKCAiAv4n9BRA9EiwA30WND0gjCjLI_oBaON-o6RpIJL7XGQRMvC_FsncqLz8XFwd205phtP3ZsRoCxfUQAvD_BwE" target="_blank">Emprunte mon toutou</a></li>
+                                                <li><a href="https://emmenetonchien.com/" target="_blank">Emmene ton chien</a></li>
+                                                <li><a href="https://www.pourmonchien.fr/" target="_blank">Pour Mon Chien</a></li>
+                                                <li><a href="https://www.chien.com/" target="_blank">Chien.com</a></li></ul>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="widget">
+                                    <h4 class="widget-title">Site d'information</h4>
+                                    <div class="tagcloud">
+                                    <a href="http://etu-web2/~21602823/Presentation_DogCare"  title="3 topics">
+                                            Plus d'information sur PETCARE
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
     </div>
    
 </body>

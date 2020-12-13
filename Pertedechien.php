@@ -162,7 +162,7 @@
 
                              echo '
                              <div style="float:left; padding: 20px 20px;">
-                             <table style="width:300px; height:100px;">
+                             <table style="width:400px; height:100px;">
                                         <tr>
                                             <td colspan=2><h2 class="post-title">'.$row['NOMCHIENP'].'</h2> </td>
                                         </tr>
@@ -183,7 +183,7 @@
                                             <td colspan=2 >
                                             <table>
                                                 <tr>
-                                                    <td><a href="mailto:'.$row['MAILP'].'">Email :'.$row['MAILP'].'</a></td>
+                                                    <td><a href="mailto:"'.$row['MAILP'].'">Email :'.$row['MAILP'].'</a></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Num :'.$row['NUMP'].'</td>
