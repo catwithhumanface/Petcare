@@ -62,7 +62,7 @@
 ### *Log-in / Log-out*
 
  - **Se Connecter**
- ![Login](md_imgs/login.gif)
+ ![Login](md_imgs/login.png)
  <br>
  &nbsp;L'inscription se fait avec l'adresse mail. Une fois se connectée, la déconnexion est demandée afin de se reconnecter.<br><br>
  &nbsp;Dès l'inscription, le mot de passe entré est crypté dans notre base de donnée afin de protéger les donnés personnelles des clients.<br><br>
@@ -71,20 +71,14 @@
 
 
 ### *Particuliers*
-![Particuliers1](md_imgs/particuliers1.png)
+![Particuliers](md_imgs/particuliers.gif)
 <br>
-&nbsp;La liste de gardiens particuliers sont montrées.<br>
-![particuliers2](md_imgs/particuliers2.png)
-<br>
-&nbsp;Il est possible de lui envoyer un message afin de comminiquer plus de besoins.<br>
-![import2](md_imgs/import.png)
-<br>
-&nbsp;Les informations de base sont déjà implanté grâce à Session. Le gardein particuliers auquel le message a été envoyé peut consulter les messages dans mon compte lors de sa connexion.
+&nbsp;La liste de gardiens particuliers sont montrées.<br>Il est possible de lui envoyer un message afin de comminiquer plus de besoins.<br>Les informations de base sont déjà implanté grâce à Session. Le gardein particuliers auquel le message a été envoyé peut consulter les messages dans mon compte lors de sa connexion.<br>
 
 ---
 
 ### *My Page*
-![Mon Compte](md_imgs/mypage.gif)
+![Mon Compte](md_imgs/moncompte.gif)
 <br>
 &nbsp;La page Mon Compte est différente selon le status du compte (Client ou Gardien). Cela est différencié dès l'inscription.
   - Client
@@ -101,7 +95,7 @@
 ### *Perte de chien*
 &nbsp;Tous les utilisateurs peuvent consulter et déclarer la perte de chien.
 1. Déclaration de perte de chien
-![pertechien](md_imgs/pertechien.png)
+![pertechien](md_imgs/perte.gif)
 
 ## 2. Défis
  - **Base de données** : 
