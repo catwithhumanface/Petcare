@@ -53,6 +53,7 @@
 5. L'adreesse mail de chenils <br>
 <br><br>
 
+### *Chenils Research*
 ![Research](md_imgs/research.gif)
 <br>
 &nbsp; La recherche se fait parmi les noms de chenils. Le mot en recherche n'a pas d'importance que ce soit en majuscule ou en miniscule. <br><br>
@@ -62,7 +63,7 @@
 ### *Log-in / Log-out*
 
  - **Se Connecter**
- ![Login](md_imgs/login.png)
+ ![Login](md_imgs/login.PNG)
  <br>
  &nbsp;L'inscription se fait avec l'adresse mail. Une fois se connectée, la déconnexion est demandée afin de se reconnecter.<br><br>
  &nbsp;Dès l'inscription, le mot de passe entré est crypté dans notre base de donnée afin de protéger les donnés personnelles des clients.<br><br>
