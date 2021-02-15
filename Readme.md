@@ -63,7 +63,7 @@
 ### *Log-in / Log-out*
 
  - **Se Connecter**
- ![Login](md_imgs/login.PNG)
+
  <br>
  &nbsp;L'inscription se fait avec l'adresse mail. Une fois se connectée, la déconnexion est demandée afin de se reconnecter.<br><br>
  &nbsp;Dès l'inscription, le mot de passe entré est crypté dans notre base de donnée afin de protéger les donnés personnelles des clients.<br><br>
